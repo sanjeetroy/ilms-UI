@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <title>File Upload to s3</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <link href="css/login.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="uniheader">
+    </div>
+  	<div class="style layout">
+  		<form name="signInForm" class="form" method="post" action="/signup" th:object="${signUp}">
+  			<div class="error">
+  				<ul class="feedback">
+  					<li class="feedback--list">
+  						<span class="feedback--list--item">Password and Confirm Password must be Same.</span>
+  					</li>
+  				</ul>
+  			</div>
+  			<fieldset class="container">
+  				<div class="header">
+  					<h3 class="header--item">sign up</h3>
+  				</div>
+  				<div class="content">
+  					<div class="form-field">
+  						<label>Email:</label>
+  						<input class="form--item" type="text" th:field="*{email}" id="email" plcaeholder="email@address.com" name="email"/>
+  					</div>
+  					<div class="form-field">
+  						<label>Password:</label>
+  						<input class="form--item" type="password" th:field="*{password}" plcaeholder="password" name="password"/>
+  					</div>
+  					<div class="form-field--last">
+  						<label>Confirm Password:</label>
+  						<input class="form--item" type="password" th:field="*{cpassword}" plcaeholder="password" name="cpassword"/>
+  					</div>
+  				</div>
+  				<div class = "footer">
+  					<menu class="toolbar">
+  						<button class="primary_button">Sign Up</button>
+  					</menu>
+  				</div>
+  			</fieldset>
+  			<p>Already have an account?
+  				<a class="signup--text" href="/">Log In.</a>
+  			</p>
+  		</form>
+  	</div>
+  	<script src="css/login.js" type="text/javascript"></script>
+  </body>
+</html>

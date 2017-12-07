@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: ilms-file-upload-s3
+Implementation-Version: 1.0
+Built-By: sanjeet.roy
+Implementation-Vendor-Id: com.mkyong
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/ilms-file-up
+ load-s3/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <title>File Upload to s3</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <link href="css/login.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="uniheader">
+    </div>
+  	<div class="style layout">
+  		<form name="signInForm" class="form" method="post" action="/home" th:object="${loginDetail}">
+  			<div class="error">
+  				<ul class="feedback">
+  					<li class="feedback--list">
+  						<span class="feedback--list--item">Unknown username / password</span>
+  					</li>
+  				</ul>
+  			</div>
+  			<fieldset class="container">
+  				<div class="header">
+  					<h3 class="header--item">Log in to your Account</h3>
+  				</div>
+  				<div class="content">
+  					<div class="form-field">
+  						<label>Email:</label>
+  						<input class="form--item" type="text" th:field="*{email}" id="email" plcaeholder="email@address.com" name="email"/>
+  					</div>
+  					<div class="form-field--last">
+  						<label>Password:</label>
+  						<input class="form--item" type="password" th:field="*{password}" plcaeholder="password" name="password"/>
+  					</div>
+  				</div>
+  				<div class = "footer">
+  					<menu class="toolbar">
+  						<button class="primary_button">Log In</button>
+  						<a class="item" href="/signup">Sign Up</a>
+  					</menu>
+  				</div>
+  			</fieldset>
+  			<p>No account?
+  				<a class="signup--text" href="/signup">Sign up for an account</a>
+  			</p>
+  		</form>
+  	</div>
+  </body>
+</html>
